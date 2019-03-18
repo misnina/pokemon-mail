@@ -1,5 +1,15 @@
 $reply: '../img/Reply_Mail.png';
+$greet: '../img/Greet_Mail.png';
+$like: '../img/Like_Mail.png';
 
 .reply {
   background-image: url($reply);
+}
+
+.greet {
+  background-image: url($greet);
+}
+
+.like {
+  background-image: url($like);
 }

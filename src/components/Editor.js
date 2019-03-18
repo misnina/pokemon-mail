@@ -3,11 +3,31 @@ import download from 'downloadjs';
 import domtoimage from 'dom-to-image';
 
 
+const MAIL = [
+  'reply',
+  'greet',
+  'like',
+]
+
 function DownloadButton(props) {
-  return(
+  return (
     <button onClick={() => {props.grabMail()}}>
       Download
     </button>
+  )
+}
+
+function MailSelect(props) {
+  return (
+    <select name="mail" onChange={(event) => props.setMail(event.target.value)}>
+      {MAIL.map(mail => {
+        console.log(mail);
+        return (
+          <option value={mail}>{mail}</option>
+        )
+      })}
+    
+    </select>
   )
 }
 
@@ -28,6 +48,9 @@ class Editor extends Component {
             onChange={(event) => this.props.setSignature(event.target.value)}
           />
         </form>
+        <MailSelect
+          setMail={this.props.setMail}
+        />
         <DownloadButton
           grabMail={this.grabMail}
          />

@@ -39,6 +39,7 @@ class App extends Component {
     this.setState({signature: signature})
   }
 
+
   render() {
     let { mail, text, title, body, signature } = this.state;
     return (
