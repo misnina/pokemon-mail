@@ -8,15 +8,15 @@ class App extends Component {
     this.state = {
       mail: "reply",
       text: "DPPt",
-      spacer: false,
+      title: "Dear Reader",
+      body: "Use this to send pokemon mail! to your friends!",
+      signature: "Love, Nina"
     }
     this.setMail = this.setMail.bind(this);
     this.setText = this.setText.bind(this);
-    this.setSpacer = this.setSpacer.bind(this);
-  }
-
-  setSpacer(bool) {
-    this.setState({spacer: bool});
+    this.setTitle = this.setTitle.bind(this);
+    this.setBody = this.setBody.bind(this);
+    this.setSignature = this.setSignature.bind(this);
   }
 
   setMail(mail) {
@@ -27,19 +27,35 @@ class App extends Component {
     this.setState({text: text});
   }
 
+  setTitle(title) {
+    this.setState({title: title});
+  }
+
+  setBody(body) {
+    this.setState({body: body});
+  }
+
+  setSignature(signature) {
+    this.setState({signature: signature})
+  }
+
   render() {
-    let { mail, text, spacer } = this.state;
+    let { mail, text, title, body, signature } = this.state;
     return (
       <div id="app" className="flex padding30">
         <Editor 
           setMail={this.setMail}
           setText={this.setText}
-          setSpacer={this.setSpacer}
+          setTitle={this.setTitle}
+          setBody={this.setBody}
+          setSignature={this.setSignature}
         />
         <Output 
           mail={mail}
           text={text}
-          spacer={spacer}
+          title={title}
+          body={body}
+          signature={signature}
         />
       </div>
     );
