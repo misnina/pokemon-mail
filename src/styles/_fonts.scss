@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Pokemon GB';
+  src: url(../font/PokemonGB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Pokemon DPPt';
+  src: url(../font/PokemonDPPt.ttf) format('truetype');
+}
+
+$GB: 'Pokemon GB';
+$DPPt: 'Pokemon DPPt';
+
+
+.GB {
+  font-family: $GB;
+  font-size: 8px;
+
+  #body {
+    margin-top: 8px;
+  }
+
+  #signature {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 100px;
+  }
+}
+
+.DPPt {
+  font-family: $DPPt;
+  font-size: 20px;
+  line-height: 0.7em;
+
+  #body {
+    margin-top: 4px;
+  }
+
+  #signature {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 100px;
+  }
+}

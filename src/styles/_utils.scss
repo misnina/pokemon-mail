@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+
+  .center {
+    justify-content: center;
+    align-content: center;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+}
+
+.padding30 {
+  padding: 30px;
+}
