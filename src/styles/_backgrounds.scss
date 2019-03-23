@@ -1,6 +1,15 @@
 $reply: '../img/Reply_Mail.png';
 $greet: '../img/Greet_Mail.png';
 $like: '../img/Like_Mail.png';
+$inqury: '../img/Inquiry_Mail.png';
+$RSVP: '../img/RSVP_Mail.png';
+$thanks: '../img/Thanks_Mail.png';
+$favored: '../img/Favored_Mail.png';
+$bridgeD: '../img/BridgeMail_D.png';
+$bridgeM: '../img/BridgeMail_M.png';
+$bridgeS: '../img/BridgeMail_S.png';
+$bridgeT: '../img/BridgeMail_T.png';
+$bridgeV: '../img/BridgeMail_V.png';
 
 .reply {
   background-image: url($reply);
@@ -12,4 +21,40 @@ $like: '../img/Like_Mail.png';
 
 .like {
   background-image: url($like);
+}
+
+.inqury {
+  background-image: url($inqury);
+}
+
+.RSVP {
+  background-image: url($RSVP);
+}
+
+.thanks {
+  background-image: url($thanks);
+}
+
+.favored {
+  background-image: url($favored);
+}
+
+.bridgeD {
+  background-image: url($bridgeD);
+}
+
+.bridgeM {
+  background-image: url($bridgeM);
+}
+
+.bridgeS {
+  background-image: url($bridgeS);
+}
+
+.bridgeT {
+  background-image: url($bridgeT);
+}
+
+.bridgeV {
+  background-image: url($bridgeV);
 }

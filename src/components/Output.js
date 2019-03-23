@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 
+function Stamp(props) {
+  return (
+    <div id="stamp">
+      {props.stamp}
+    </div>
+  )
+}
+
 class Header extends Component {
   render() {
-    return(
+    return (
       <div id="header">
-        {this.props.title}:
+        {this.props.title},
       </div>
     )
   }
@@ -12,7 +20,7 @@ class Header extends Component {
 
 class Body extends Component {
   render() {
-    return(
+    return (
       <div id="body">
         {this.props.body}
       </div>
@@ -22,7 +30,7 @@ class Body extends Component {
 
 class Signature extends Component {
   render() {
-    return(
+    return (
       <div id="signature">
         {this.props.signature}
       </div>
@@ -45,6 +53,9 @@ class Output extends Component {
             />
             <Signature
               signature={this.props.signature}
+            />
+            <Stamp
+              stamp={this.props.stamp}
             />
           </div>
         </div>

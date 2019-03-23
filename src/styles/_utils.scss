@@ -11,6 +11,14 @@
   }
 }
 
+.column {
+  flex-direction: column;
+}
+
+.max-width {
+  width: 100%;
+}
+
 .padding30 {
   padding: 30px;
 }

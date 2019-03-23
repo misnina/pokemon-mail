@@ -10,53 +10,61 @@ class App extends Component {
       text: "DPPt",
       title: "Dear Reader",
       body: "Use this to send pokemon mail! to your friends!",
-      signature: "Love, Nina"
+      signature: "Love, Nina",
+      stamp: 'a',
     }
     this.setMail = this.setMail.bind(this);
     this.setText = this.setText.bind(this);
     this.setTitle = this.setTitle.bind(this);
     this.setBody = this.setBody.bind(this);
     this.setSignature = this.setSignature.bind(this);
+    this.setStamp = this.setStamp.bind(this);
   }
 
   setMail(mail) {
-    this.setState({mail: mail});
+    this.setState({ mail });
   }
 
   setText(text) {
-    this.setState({text: text});
+    this.setState({ text });
   }
 
   setTitle(title) {
-    this.setState({title: title});
+    this.setState({ title });
   }
 
   setBody(body) {
-    this.setState({body: body});
+    this.setState({ body });
   }
 
   setSignature(signature) {
-    this.setState({signature: signature})
+    this.setState({ signature });
+  }
+
+  setStamp(stamp) {
+    this.setState({ stamp });
   }
 
 
   render() {
-    let { mail, text, title, body, signature } = this.state;
+    let { mail, text, title, body, signature, stamp } = this.state;
     return (
       <div id="app" className="flex padding30">
-        <Editor 
+        <Editor
           setMail={this.setMail}
           setText={this.setText}
           setTitle={this.setTitle}
           setBody={this.setBody}
           setSignature={this.setSignature}
+          setStamp={this.setStamp}
         />
-        <Output 
+        <Output
           mail={mail}
           text={text}
           title={title}
           body={body}
           signature={signature}
+          stamp={stamp}
         />
       </div>
     );

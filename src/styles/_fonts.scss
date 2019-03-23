@@ -8,9 +8,26 @@
   src: url(../font/PokemonDPPt.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "Pokemon RSE";
+  src: url(../font/rusa.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "PokePix1";
+  src: url(../font/POKPIX1.TTF) format('truetype');
+}
+
+@font-face {
+  font-family: "PokePix3";
+  src: url(../font/POKPIX3.TTF) format('truetype');
+}
+
 $GB: 'Pokemon GB';
 $DPPt: 'Pokemon DPPt';
-
+$RSE: 'Pokemon RSE';
+$PP1: 'PokePix1';
+$PP3: 'PokePix3';
 
 .GB {
   font-family: $GB;
@@ -26,6 +43,15 @@ $DPPt: 'Pokemon DPPt';
     bottom: 0;
     margin-bottom: 45px;
     margin-left: 150px;
+  }
+
+  #stamp {
+    font-size: 20px;
+    font-family: $PP1;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 100px;
   }
 }
 
@@ -44,5 +70,42 @@ $DPPt: 'Pokemon DPPt';
     bottom: 0;
     margin-bottom: 45px;
     margin-left: 150px;
+  }
+
+  #stamp {
+    font-size: 20px;
+    font-family: $PP1;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 100px;
+  }
+}
+
+
+.RSE {
+  font-family: $RSE;
+  font-size: 14px;
+  line-height: 1em;
+
+  #body {
+    margin-top: 4px;
+    word-wrap: break-word;
+  }
+
+  #signature {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 150px;
+  }
+
+  #stamp {
+    font-size: 20px;
+    font-family: $PP1;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 45px;
+    margin-left: 100px;
   }
 }

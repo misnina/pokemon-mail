@@ -7,11 +7,28 @@ const MAIL = [
   'reply',
   'greet',
   'like',
+  'inqury',
+  'RSVP',
+  'thanks',
+  'favored',
+  'bridgeD',
+  'bridgeM',
+  'bridgeS',
+  'bridgeT',
+  'bridgeV',
+]
+
+const TEXT = [
+  'DPPt',
+  'GB',
+  'RSE',
 ]
 
 function DownloadButton(props) {
   return (
-    <button onClick={() => {props.grabMail()}}>
+    <button
+      onClick={() => { props.grabMail() }}
+    >
       Download
     </button>
   )
@@ -19,14 +36,34 @@ function DownloadButton(props) {
 
 function MailSelect(props) {
   return (
-    <select name="mail" onChange={(event) => props.setMail(event.target.value)}>
+    <select
+      name="mail"
+      className="max-width"
+      onChange={(event) => props.setMail(event.target.value)}
+    >
       {MAIL.map(mail => {
-        console.log(mail);
         return (
           <option value={mail}>{mail}</option>
         )
       })}
-    
+
+    </select>
+  )
+}
+
+function TextSelect(props) {
+  return (
+    <select
+      name="text"
+      className="max-width"
+      onChange={(event) => props.setText(event.target.value)}
+    >
+      {TEXT.map(text => {
+        return (
+          <option value={text}>{text}</option>
+        )
+      })}
+
     </select>
   )
 }
@@ -34,26 +71,62 @@ function MailSelect(props) {
 class Editor extends Component {
   render() {
     return (
-      <div id="editor" className="flex grow center">
+      <div id="editor" className="flex column grow center">
         <form>
-          <input 
-            type="text" 
-            onChange={(event) => this.props.setTitle(event.target.value)}
-          />
-          <textarea
-            onChange={(event) => this.props.setBody(event.target.value)}
-          />
-          <input
-            type="text"
-            onChange={(event) => this.props.setSignature(event.target.value)}
-          />
+          <p>Title:
+            <input
+              className="max-width"
+              type="text"
+              onChange={(event) => this.props.setTitle(event.target.value)}
+              maxlength={25}
+            />
+            <p>
+            </p>
+            Body:
+            <textarea
+              className="max-width"
+              onChange={(event) => this.props.setBody(event.target.value)}
+              maxlength={175}
+            />
+          </p>
+          <p>
+            Signature
+            <input
+              className="max-width"
+              type="text"
+              onChange={(event) => this.props.setSignature(event.target.value)}
+              maxlength={15}
+            />
+          </p>
+          <p>
+            Stamp (type a character to get a stamp)
+            <input
+              className="max-width"
+              type="text"
+              onChange={(event) => this.props.setStamp(event.target.value)}
+              maxlength={1}
+            />
+          </p>
         </form>
-        <MailSelect
-          setMail={this.props.setMail}
-        />
-        <DownloadButton
-          grabMail={this.grabMail}
-         />
+        <p>
+          Stationary
+          <MailSelect
+            setMail={this.props.setMail}
+          />
+        </p>
+        <p>
+          Font Choice
+          <TextSelect
+            setText={this.props.setText}
+          />
+        </p>
+
+        Grab an image of your mail and send it to a friend!
+        <p>
+          <DownloadButton
+            grabMail={this.grabMail}
+          />
+        </p>
       </div>
     );
 
